@@ -1,0 +1,16 @@
+<h1> Welcome to CsvUploader </h1>
+<%= link_to "Upload a new file", new_csvupload_path %>
+
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <table width="80%">
+      <tr><th>Original file</th><th>Montage File</th></tr>
+      <% @csvuploaded.each do |file| %>
+        <tr>
+          <td><%=link_to file.originalfile.identifier, file.originalfile.url %></td>
+          <td><%=link_to file.photomontage_file, file.photomontage_file %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

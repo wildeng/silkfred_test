@@ -1,0 +1,22 @@
+<div class="container">
+  	<div class="row" data-no-turbolink>
+		<%= semantic_form_for @csvupload do |r| %>
+			<div class="row">
+				<div class="col-xs-12 col-ms-12 col-md-12 col-lg-12">
+					<%= r.input :description, label: "Description" %>
+				</div>
+			</div>
+			<div class="row">
+    		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<%= r.input :originalfile, as: :file, label: "Input CSV file" %>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<%= r.action :submit, label: "Save", button_html: {class: 'btn btn-warning' } %>
+		    		<%= r.action :cancel, label: "Cancel", button_html: {class: 'btn btn-info' } %>
+		    	</div>
+			</div>
+		<% end %>
+	</div>
+</div>

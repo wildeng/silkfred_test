@@ -1,0 +1,56 @@
+// Place all the styles related to the fileuploader controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.csvupload {
+  li {
+     list-style-type:none;
+  }
+}
+
+.label{
+  color: #000000;
+}
+
+a {
+  color: #777;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #333;
+  text-decoration: underline;
+}
+
+.navbar {
+  margin-bottom: 0px !important;
+}
+
+
+.navbar-brand {
+  padding: 0px; /* firefox bug fix */
+
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 5px; /* firefox bug fix */
+  width: auto;
+}
+
+.navbar-nav > li > a{
+  color: #777 !important;
+  text-decoration: none;
+}
+
+.navbar-nav > li > a:hover, a:focus{
+  color: #333 !important;
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+
+.login-form {
+  margin-top: 40px;
+}

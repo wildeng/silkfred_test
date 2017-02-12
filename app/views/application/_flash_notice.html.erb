@@ -1,0 +1,8 @@
+<% flash.each do |key, value| %>
+ <%= render partial: 'modal_flash_notice', locals:{flashclass: flash_class(key), markup_content: value}%>
+ <script>
+     $(document).ready(function(){
+       $("#modalFlashMessage").modal("show");
+     });
+ </script>
+<% end %>
