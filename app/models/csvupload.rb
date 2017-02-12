@@ -21,7 +21,7 @@ class Csvupload < ActiveRecord::Base
       extension = File.extname(URI.parse(row[1]).path)
       montage_filename = File.basename(URI.parse(row[0]).path,extension) + "_" + File.basename(URI.parse(row[1]).path,extension)
       image_filename_path = self.create_montage_url(montage_filename, extension)
-      self.delay.create_montage(row[0],row[1], image_filename_path)
+      self.delay(run_at: 2.minutes.from_now).create_montage(row[0],row[1], image_filename_path)
       local_filename_path = self.create_public_montage_url(montage_filename, extension, host_url)
       row_array << [row[0],row[1], local_filename_path]
       @index +=1

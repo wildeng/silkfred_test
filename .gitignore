@@ -17,3 +17,6 @@
 /tmp
 .DS_Store
 .byebug_history
+/public/product_image/
+/public/uploads/
+
