@@ -1,28 +1,8 @@
 == README
+I did this application as a test for an interview.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+It basically parses a csv files which has two columns; in each column there is a url from which a picture can be downloaded.
 
-Things you may want to cover:
+The applications uses then delayed_job to parse the csv, to donwload the pictures to a temp file and then to create a photomontage using RMagick.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+The public url of the photomontage is the saved in a CSV file so that it could be downloaded later.
